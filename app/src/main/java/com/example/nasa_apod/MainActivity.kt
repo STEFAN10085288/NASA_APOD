@@ -25,19 +25,32 @@ class MainActivity : AppCompatActivity() {
     {
         val executor = Executors.newSingleThreadExecutor()
 
+        //reads from url
         executor.execute{
             val url = URL("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2014-10-01");
             val json = url.readText()
 
+            //parse json to APOD object
+            val apod = Gson().fromJson(json,APOD::class.java)
 
-            val apodList = Gson().fromJson(json,Array<APOD>::class.java).toList()
-            android.os.Handler(Looper.getMainLooper()).post{
-             Log.i("APOD", "Plain json vars  $json")
-                Log.i("APOD", "Converted json   ${apodList.toString()}")
+            //checks if it null before proceeding
+            apod?.let {
+                //assigns data to local variables
+                val title = apod.title
+                val date = apod.date
+                val explanation = apod.explanation
+                val url = apod.url
+
+                //log data
+                Log.i("APOD", "Title: $title")
+                Log.i("APOD", "Date: $date")
+                Log.i("APOD", "Explanation: $explanation")
+                Log.i("APOD", "URL: $url")
+
+                //code to assign values to front end elements
+                
             }
 
         }
-
-
     }
 }

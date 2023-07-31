@@ -4,5 +4,5 @@ data class APOD (
     val title :String,
     val date : String,
     val explanation :String,
-    val imageURL: String
+    val url: String
         )
