@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Looper
 import android.util.Log
+import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
@@ -14,17 +16,29 @@ import com.google.gson.Gson
 import java.util.logging.Handler
 
 class MainActivity : AppCompatActivity() {
+
+    val APODDate :String = ""
+    private lateinit var  searchBtn : Button
+    private lateinit var  edtSearchedDate : EditText
+    private lateinit var searchDate :String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        getAPOD()
+        searchBtn = findViewById(R.id.btnGetSelectedAPODDate)
+        edtSearchedDate = findViewById(R.id.edtAPODDate)
+
+
+        searchBtn.setOnClickListener {
+            searchDate = edtSearchedDate.text.toString()
+            Log.i("SearchDate","Search date: $searchDate")
+            getAPOD(searchDate)
+        }
+
     }
 
 
-
-
-    fun getAPOD()
+    fun getAPOD(searchDate : String)
     {
         val executor = Executors.newSingleThreadExecutor()
 
@@ -36,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
         //reads from url
         executor.execute{
-            val url = URL("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY");
+            val url = URL("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${searchDate}");
             val json = url.readText()
 
             //parse json to APOD object

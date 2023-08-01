@@ -6,32 +6,53 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
+
+    <EditText
+        android:id="@+id/edtAPODDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Enter Date" />
+
+    <Button
+        android:id="@+id/btnGetSelectedAPODDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:layout_below="@id/edtAPODDate"/>
+
     <TextView
         android:id="@+id/titleTextView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_below="@id/btnGetSelectedAPODDate"/>
 
     <TextView
         android:id="@+id/dateTextView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/apodImageView" />
+        android:layout_below="@id/titleTextView" />
 
     <TextView
         android:id="@+id/explanationTextView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/dateTextView" />
+        android:layout_below="@id/dateTextView"
+        />
 
 
     <ImageView
         android:id="@+id/apodImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/titleTextView"
+        android:layout_below="@id/explanationTextView"
         android:layout_centerInParent="true"
         tools:srcCompat="@tools:sample/avatars" />
+
+
+
 
 </RelativeLayout>
