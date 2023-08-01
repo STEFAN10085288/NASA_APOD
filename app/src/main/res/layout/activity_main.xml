@@ -7,13 +7,20 @@
     android:padding="16dp">
 
 
+    <Button
+        android:id="@+id/btnGetHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Info" />
+
     <EditText
         android:id="@+id/edtAPODDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:text="Enter Date" />
+        android:text="Enter Date"
+        android:layout_below="@id/btnGetHelp"/>
 
     <Button
         android:id="@+id/btnGetSelectedAPODDate"
@@ -41,6 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/dateTextView"
+
         />
 
 

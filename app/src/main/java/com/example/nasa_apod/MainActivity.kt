@@ -1,5 +1,6 @@
 package com.example.nasa_apod
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Looper
@@ -19,15 +20,24 @@ class MainActivity : AppCompatActivity() {
 
     val APODDate :String = ""
     private lateinit var  searchBtn : Button
+    private lateinit var  infoBtn : Button
     private lateinit var  edtSearchedDate : EditText
     private lateinit var searchDate :String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
+        infoBtn = findViewById(R.id.btnGetHelp)
         searchBtn = findViewById(R.id.btnGetSelectedAPODDate)
         edtSearchedDate = findViewById(R.id.edtAPODDate)
 
+
+        infoBtn.setOnClickListener {
+            startActivity(Intent(this,helpScreen::class.java))
+        }
 
         searchBtn.setOnClickListener {
             searchDate = edtSearchedDate.text.toString()
