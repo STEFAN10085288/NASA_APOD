@@ -1,39 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/helpDescription"
+        android:padding="16dp"
+        android:id="@+id/welcome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome to AstroSense - Your Personal Astrology Companion. Unlock the cosmic mysteries and gain insights into your life with our exclusive daily and weekly Astrology Picture of the Day (APOD) service.\n\n
-AstroSense provides an enriching experience by offering a vast repository of astrological images that reveal the celestial wonders and align with your daily journey. Empower yourself with the knowledge of planetary positions and their influence on your zodiac.\n\n" />
+        android:text="Welcome to AstroSense - Your Personal Astrology Companion. Unlock the cosmic mysteries and gain insights into your life with our exclusive daily and weekly Astrology Picture of the Day (APOD) service.
+AstroSense provides an enriching experience by offering a vast repository of astrological images that reveal the celestial wonders and align with your daily journey. Empower yourself with the knowledge of planetary positions and their influence on your zodiac.\n" />
 
     <TextView
+        android:padding="16dp"
+        android:id="@+id/features"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Features:" />
+        android:text="Features:"
+        android:layout_below="@id/welcome"/>
 
     <TextView
+        android:padding="16dp"
+        android:id="@+id/daily"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/features"
         android:text="✦ Daily APOD: Get a captivating astrology picture every day, handpicked by our expert astrologers based on celestial events and their astrological significance." />
 
     <TextView
+        android:padding="16dp"
+        android:id="@+id/weekly"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/daily"
         android:text="✦ Weekly APOD: Explore a curated collection of astrology pictures, updated weekly, that provide a deeper understanding of the cosmic energies shaping your destiny." />
 
-    <TextView
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="AstroSense is designed with simplicity and elegance in mind, ensuring an intuitive user experience across all devices. Whether you're a seasoned astrology enthusiast or a curious explorer, AstroSense welcomes you to embark on a cosmic journey like no other.\n\n
-Download now and let the stars guide you on the path to self-discovery and fulfillment.\n\n
-For any assistance or inquiries, please contact our support team at support@astrosense.com.\n\n
-Note: AstroSense is for entertainment and informational purposes only. Please seek professional advice for important decisions or concerns affecting your life.\n\n
-© 2023 AstroSense. All rights reserved." />
-</LinearLayout>
+        android:id="@+id/bottomNav"
+        app:itemBackground="@color/purple_500"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>
