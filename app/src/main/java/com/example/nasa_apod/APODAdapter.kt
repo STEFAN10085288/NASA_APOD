@@ -22,7 +22,7 @@ class ApodAdapter(private var apodList: List<APOD>) :
     }
 
     class ApodViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        /*val imageView: ImageView = itemView.findViewById(R.id.APOD_image)*/
+        val imageView: ImageView = itemView.findViewById(R.id.APOD_image)
         val titleTextView: TextView = itemView.findViewById(R.id.APOD_title)
         val dateTextView: TextView = itemView.findViewById(R.id.APOD_date)
         val explanationTextView: TextView = itemView.findViewById(R.id.APOD_Explanation)
@@ -40,9 +40,9 @@ class ApodAdapter(private var apodList: List<APOD>) :
         holder.dateTextView.text = currentApod.date
         holder.explanationTextView.text = currentApod.explanation
 
-        /*Glide.with(holder.itemView)
+        Glide.with(holder.itemView)
             .load(currentApod.url)
-            .into(holder.imageView)*/
+            .into(holder.imageView)
     }
 
     override fun getItemCount() :Int{

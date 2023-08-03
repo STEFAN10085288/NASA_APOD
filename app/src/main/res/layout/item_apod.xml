@@ -33,9 +33,9 @@
 
         <ImageView
             android:id="@+id/APOD_image"
-            android:layout_width="40dp"
+            android:layout_width="100dp"
             android:layout_gravity="center"
-            android:layout_height="40dp" />
+            android:layout_height="100dp" />
 
         <TextView
             android:id="@+id/APOD_Explanation"
