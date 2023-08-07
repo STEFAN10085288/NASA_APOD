@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/background2">
 
     <TextView
         android:padding="16dp"
@@ -11,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Welcome to AstroSense - Your Personal Astrology Companion. Unlock the cosmic mysteries and gain insights into your life with our exclusive daily and weekly Astrology Picture of the Day (APOD) service.
-AstroSense provides an enriching experience by offering a vast repository of astrological images that reveal the celestial wonders and align with your daily journey. Empower yourself with the knowledge of planetary positions and their influence on your zodiac.\n" />
+AstroSense provides an enriching experience by offering a vast repository of astrological images that reveal the celestial wonders and align with your daily journey. Empower yourself with the knowledge of planetary positions and their influence on your zodiac.\n"
+        android:textColor="#274472" />
 
     <TextView
         android:padding="16dp"
@@ -19,7 +21,9 @@ AstroSense provides an enriching experience by offering a vast repository of ast
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Features:"
-        android:layout_below="@id/welcome"/>
+        android:layout_below="@id/welcome"
+        android:textStyle="bold"
+        android:textColor="#274472"/>
 
     <TextView
         android:padding="16dp"
@@ -27,7 +31,8 @@ AstroSense provides an enriching experience by offering a vast repository of ast
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/features"
-        android:text="✦ Daily APOD: Get a captivating astrology picture every day, handpicked by our expert astrologers based on celestial events and their astrological significance." />
+        android:text="✦ Daily APOD: Get a captivating astrology picture every day, handpicked by our expert astrologers based on celestial events and their astrological significance."
+        android:textColor="#274472" />
 
     <TextView
         android:padding="16dp"
@@ -35,7 +40,8 @@ AstroSense provides an enriching experience by offering a vast repository of ast
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/daily"
-        android:text="✦ Weekly APOD: Explore a curated collection of astrology pictures, updated weekly, that provide a deeper understanding of the cosmic energies shaping your destiny." />
+        android:text="✦ Weekly APOD: Explore a curated collection of astrology pictures, updated weekly, that provide a deeper understanding of the cosmic energies shaping your destiny."
+        android:textColor="#274472"/>
 
 
 

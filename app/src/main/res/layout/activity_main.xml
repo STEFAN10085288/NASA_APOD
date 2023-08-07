@@ -4,66 +4,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:background="@drawable/background2">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#274472"
+                />
+
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#274472"
+                 />
+
+            <TextView
+                android:id="@+id/explanationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#274472"
+                 />
+
+            <ImageView
+                android:id="@+id/apodImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                tools:srcCompat="@tools:sample/avatars" />
+        </LinearLayout>
+    </ScrollView>
 
 
-    <Button
-        android:id="@+id/btnSelectDate"
-        android:text="Select Date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="40dp"
+            android:layout_above="@id/bottomNav"
+            android:layout_marginStart="60dp"
+            android:id="@+id/btnSelectDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#274472"
+            android:text="Select Date"
+            android:textColor="#E5E4E2"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"/>
+
+        <Button
+            android:layout_marginBottom="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_above="@id/bottomNav"
+            android:layout_marginEnd="60dp"
+            android:id="@+id/btnGetSelectedAPODDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#274472"
+            android:text="Search"
+            android:textColor="#E5E4E2"
+            android:textStyle="bold" />
 
 
-    <Button
-        android:id="@+id/btnGetSelectedAPODDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Search"
-        android:layout_below="@id/btnSelectDate"/>
-
-    <TextView
-        android:id="@+id/titleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_below="@id/btnGetSelectedAPODDate"/>
-
-    <TextView
-        android:id="@+id/dateTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/titleTextView" />
-
-    <TextView
-        android:id="@+id/explanationTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/dateTextView"
-
-        />
 
 
-    <ImageView
-        android:id="@+id/apodImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/explanationTextView"
-        android:layout_centerInParent="true"
-        tools:srcCompat="@tools:sample/avatars" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bottomNav"
+        android:layout_alignParentBottom="true"
         app:itemBackground="@color/purple_500"
         app:itemTextColor="@drawable/selector"
         app:itemIconTint="@drawable/selector"
-        app:menu="@menu/menu"
-        android:layout_alignParentBottom="true"
-        />
-
-
-
+        app:menu="@menu/menu" />
 
 </RelativeLayout>

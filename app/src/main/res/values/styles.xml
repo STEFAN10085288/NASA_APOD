@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomDatePickerDialog" parent="ThemeOverlay.AppCompat.Dialog">
+        <!-- Customize the colors you want for the date picker -->
+        <item name="colorAccent">@color/purple_500</item>
+        <!-- Add any other custom attributes you want to modify -->
+    </style>
+
+</resources>

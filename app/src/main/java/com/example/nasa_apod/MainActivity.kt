@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         datebtn = findViewById(R.id.btnSelectDate)
         //button to show date picker
         datebtn.setOnClickListener {
-            val dpd = DatePickerDialog(this,DatePickerDialog.OnDateSetListener { view, mYear, mMonth, mDay ->
+            val dpd = DatePickerDialog(this,R.style.CustomDatePickerDialog,DatePickerDialog.OnDateSetListener { view, mYear, mMonth, mDay ->
                 searchDate = "${mYear}-${mMonth}-${mDay}"
                 datebtn.text = searchDate
             },year,month,day)

@@ -4,14 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/background2">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/APOD_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="650dp"
         tools:itemCount="5"
-        tools:listitem="@layout/item_apod" />
+        tools:listitem="@layout/item_apod"
+        android:outlineAmbientShadowColor="#274472" />
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

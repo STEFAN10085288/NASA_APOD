@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
-    app:cardElevation="6dp">
+    app:cardElevation="6dp"
+    android:backgroundTint="#C4C8CC">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +21,8 @@
             android:layout_marginStart="10dp"
             android:layout_marginLeft="15dp"
             android:text="Item"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#274472"/>
 
         <TextView
             android:id="@+id/APOD_date"
@@ -29,13 +31,14 @@
             android:layout_marginStart="10dp"
             android:layout_marginLeft="15dp"
             android:text="Item"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#274472"/>
 
         <ImageView
             android:id="@+id/APOD_image"
-            android:layout_width="100dp"
+            android:layout_width="200dp"
             android:layout_gravity="center"
-            android:layout_height="100dp" />
+            android:layout_height="200dp" />
 
         <TextView
             android:id="@+id/APOD_Explanation"
@@ -44,7 +47,8 @@
             android:layout_marginLeft="15dp"
             android:layout_gravity="center"
             android:text="Item"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#274472"/>
 
     </LinearLayout>
 
