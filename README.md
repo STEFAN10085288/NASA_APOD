@@ -27,10 +27,6 @@
             border-radius: 4px;
             font-size: 14px;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
     </style>
 </head>
 <body>
@@ -42,19 +38,19 @@
     <img src="url_to_apod_image" alt="Astronomy Picture of the Day">
     <p>Here is the Astronomy Picture of the Day along with its description.</p>
 
-    <h3>View Previous Week's Pictures</h3>
+    <h3>View Previous Week's Descriptions</h3>
     <p>Explore the Astronomy Pictures from the past week:</p>
     <ul>
-        <li><a href="url_to_apod_image_1"><img src="url_to_apod_image_1" alt="APOD Image 1"></a></li>
-        <li><a href="url_to_apod_image_2"><img src="url_to_apod_image_2" alt="APOD Image 2"></a></li>
-        <!-- Add more images as needed -->
+        <li>
+            <h4>Previous Day's Title 1</h4>
+            <p>Description of the Astronomy Picture of the Day for previous day 1.</p>
+        </li>
+        <li>
+            <h4>Previous Day's Title 2</h4>
+            <p>Description of the Astronomy Picture of the Day for previous day 2.</p>
+        </li>
     </ul>
 
-    <h2>Usage Instructions</h2>
-    <p>Instructions on how to use the app go here.</p>
-
-    <h2>About NASA APOD</h2>
-    <p>Information about NASA's Astronomy Picture of the Day can be included here.</p>
 
 </body>
 </html>
